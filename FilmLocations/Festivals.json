@@ -1,0 +1,47 @@
+// Json Code
+{
+    “festival”:
+    [
+        {
+            “name”: “Nightmare on Rezz St.”,
+            “city”: "San Francisco",
+            "date": "Oct. 31, 2020",
+        },
+            “lineup”:
+                [
+                    {
+                    “name”: “Rezz”,
+                    “songs": "5",
+                    “type”: "music",
+                    },
+                    {
+                    “name”:  “Skrillex”,
+                    “songs”: "7",
+                    “type”: "music",
+                    }
+                ],
+        },
+    
+        {
+            “name”: “Sandlot Vibrations”,
+            “city”: "Los Angeles",
+            "date": "July 4, 2020",
+            },
+        
+            “lineup”:
+                [
+                    {
+                    “name”: “Ray Charles”,
+                    “songs”: "10",
+                    “type”: "music",
+                    },
+                    {
+                    “name”:  “Action Bronson”,
+                    “songs”: "7",
+                    “type”: "music",
+                    }
+                ],
+            }
+    ]
+}
+
