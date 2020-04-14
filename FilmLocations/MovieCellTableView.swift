@@ -1,5 +1,5 @@
 //
-//  MovieCellTableViewCell.swift
+//  MovieCellTableView.swift
 //  FilmLocations
 //
 //  Created by Benjamin Simpson on 4/13/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieCellTableViewCell: UITableViewCell {
+class MovieCellTableView: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

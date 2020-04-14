@@ -58,10 +58,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let contents = try? Data(contentsOf: url)
             if let data = contents{
                 let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 do {
                     let filmsFromJSON = try decoder.decode([FilmEntryCodable].self, from: data)
                     films = filmsFromJSON
+                    
                     section.reloadData()
+                    
                 } catch {
                     print("Parsing Failed")
                 }
@@ -93,18 +96,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 }
 
-extension FilmEntry {
-    init?(json: [String: Any]) {
-        guard let locations = json["locations"] as? String,
-            let a1 = json["actor_1"] as? String,
-            let year = json["release_year"] as? String,
-            let title = json["title"] as? String
-            else{
-                return nil
-        }
-        self.firstActor = a1
-        self.releaseYear = year
-        self.title = title
-        self.locations = locations
-    }
-}
+//extension FilmEntry {
+//    init?(json: [String: Any]) {
+//        guard let locations = json["locations"] as? String,
+//            let a1 = json["actor_1"] as? String,
+//            let year = json["release_year"] as? String,
+//            let title = json["title"] as? String
+//            else{
+//                return nil
+//        }
+//        self.firstActor = a1
+//        self.releaseYear = year
+//        self.title = title
+//        self.locations = locations
+//    }
+//}
